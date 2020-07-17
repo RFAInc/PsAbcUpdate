@@ -5,9 +5,7 @@ PowerShell wrapper for the ABC-Update CLI tool.
 # Getting Started
 1.	Load module into session (Quick and Dirty)
 
-        ```
         Invoke-Expression (( new-object Net.WebClient ).DownloadString( 'https://raw.githubusercontent.com/RFAInc/PsAbcUpdate/master/PsAbcUpdate.raw.ps1' ));
-        ```
 
 <br>
 
@@ -35,23 +33,7 @@ PowerShell wrapper for the ABC-Update CLI tool.
 
 1.  Get next version number `v#.#.#.#` and a comment `[string]` for the change log.
 
-2.  Create a new Package folder as .\Package\v#.#.#.#\
-
-3.  Copy the PSD1 files in as-is.
-
-    Update the version number and copyright date if required.
-
-	Update the Exported Function Name array with the basenames of the files under the .\ folder only.
-
-4.  Create a new, blank PSM1 file in here. 
-
-    Populate it with all of the PS1 files' content from the .\ and .\Private folders.
-
-5.  Create a NUSPEC file and update the version and change log.
-
-6.  Build the NuGet package.
-
-7.  Push to private repo.
+2.  Add any new function names to the array under .raw.ps1 file.
 
 
 
